@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    
+    <!-- Branquinha bochechuda💌 será o nome do link -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ric para Lele</title>
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💌%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+</body>
+<div id="pagina1"></div>
+<div class="stars"></div>
+    
+        <div class="carta" onclick="abrirCarta()">
+        <strong>Para o meu amor, Lele 💌</strong>
+        <span class="instrucao">Clique para abrir a carta</span>
+        </div>  
+    </div>
+   
+
+<div id="siteCompleto" style="display: none;">
+     <!-- TODO seu site aqui dentro -->
+
+    
+
+   <div class="container">      
+
+    <div class="apresentação">
+        <h1>Para o meu amor, Lele 💌!</h1>
+    </div>
+
+    <p id="contador"></p>
+
+    <div class="foto-container">
+        <img src="img/Maanaim-juntos-2.jpeg" onclick="mostrarMensagem()">
+    </div>
+
+    <div id="mensagem" class="mensagem">
+        Apaixonado na minha branquinha bochechuda! 💖
+    </div>
+
+    <div class="galeria">
+        <img src="img/Maanaim juntos 1.jpeg" onclick="trocarFrase()">
+        <img src="img/Leticia e Richard.jpeg" onclick="trocarFrase()">
+        <img src="img/Leticia e Richard esp.jpeg" onclick="trocarFrase()">
+    </div>
+
+    
+    <b id="frase"></b>
+
+</div>
+
+
+
+<a href="surp.html">
+    
+<button class="botao-revelar" onclick="mostrarMais()"><h2>Minha declaração 💌</h2></button>
+
+</a>
+
+    
+
+<script>
+    function mostrarMensagem() {
+        const msg = document.getElementById("mensagem");
+        msg.style.opacity = "1";
+    }
+
+    const frases = [ 
+        "Eu escolheria você mil vezes.",
+        "Você é minha oração respondida.",
+        "Com você, tudo faz sentido.",
+        "Meu lugar favorito é ao seu lado."
+    ];
+
+    let index = 0;
+
+    function trocarFrase() {
+        document.getElementById("frase").innerText = frases[index];
+        index = (index + 1) % frases.length;
+    }
+</script>
+
+<script>
+function abrirCarta() {
+    document.querySelector(".carta").style.display = "none";
+    
+    const site = document.getElementById("siteCompleto");
+    site.style.display = "block";
+    site.style.animation = "fadeIn 1.5s ease";
+}
+</script>
+
+<script>
+
+        // 4. CHUVA DE CORAÇÕES E VIOLINOS
+        setInterval(() => {
+            const elemento = document.createElement("div");
+
+            // Lógica para escolher aleatoriamente entre Coração e Violino
+            // Math.random() gera um número entre 0 e 1.
+            // Se for maior que 0.5 (50% de chance), é Violino. Se não, é Coração.
+            if (Math.random() > 0.5) {
+                elemento.innerHTML = "🎻"; // Violino
+            } else {
+                elemento.innerHTML = "💖"; // Coração
+            }
+
+            // Estilos para fazer os elementos caírem (Mantido o original, com pequenos ajustes)
+            elemento.style.position = "fixed";
+            elemento.style.left = Math.random() * 100 + "vw"; // Posição horizontal aleatória
+            elemento.style.top = "-30px"; // Começa um pouco acima da tela
+            elemento.style.fontSize = "25px"; // Aumentei um pouquinho o tamanho para o violino aparecer melhor
+            elemento.style.zIndex = "1000"; // Garante que fique por cima de tudo
+            elemento.style.pointerEvents = "none"; // Impede que o ícone atrapalhe os cliques na página
+
+            // Define a animação (o nome da animação deve ser o mesmo do seu CSS, ex: 'fall')
+            elemento.style.animation = "fall 5s linear forwards";
+
+            // Adiciona o elemento ao corpo da página
+            document.body.appendChild(elemento);
+
+            // Remove o elemento da página após 5 segundos para não pesar
+            setTimeout(() => elemento.remove(), 5000);
+
+        }, 400); // Diminuí o tempo para 400ms para a chuva ficar um pouco mais densa
+
+</script>
+
+
+
+<script>
+const dataInicio = new Date("2025-12-15");
+
+function atualizarContador() {
+    const agora = new Date();
+    const diff = agora - dataInicio;
+
+    const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const horas = Math.floor(diff / (1000 * 60 * 60) % 24);
+    const minutos = Math.floor(diff / (1000 * 60) % 60);
+    const segundos = Math.floor(diff / 1000 % 60);
+
+    document.getElementById("contador").innerText =
+        `Estamos juntos há ${dias} dias, ${horas}h ${minutos}m ${segundos}s 💖`;
+}
+
+setInterval(atualizarContador, 1000);
+
+function mostrarMais() {
+    var info = document.getElementById("info-extra");
+    
+    // Se estiver escondido, mostra. Se estiver aparecendo, esconde.
+    if (info.style.display === "none") {
+        info.style.display = "block";
+    } else {
+        info.style.display = "none";
+    }
+}
+
+ 
+
+</script>
+</body>
+</html>
+               

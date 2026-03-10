@@ -1,0 +1,465 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #fff0f5);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+        animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+h1 {
+    color: #c2185b;
+    margin-top: 30px;
+    font-size: 32px;
+}
+
+h2 {
+    color: #880e4f;
+    margin-top: 20px;
+}
+
+iframe {
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+.container-zoom {
+  width: 300px; /* Tamanho da área da imagem */
+  height: 200px;
+  overflow: hidden; /* Esconde a parte da imagem que sai do contêiner */
+  cursor: pointer; /* Faz o mouse virar a 'mãozinha' de clique */
+}
+
+
+.container-zoom img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease; /* Suaviza a transição */
+  cursor: pointer; /* Faz o mouse virar a 'mãozinha' de clique */
+}
+
+img {
+    margin-top: 30px;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+    cursor: pointer; /* Faz o mouse virar a 'mãozinha' de clique */
+}
+
+.container-zoom:hover img {
+    cursor: pointer; /* Faz o mouse virar a 'mãozinha' de clique */
+  transform: scale(5.0); /* Aumenta a imagem em 20% */
+}
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: rgb(23, 14, 14);
+    margin: 10px auto;
+    padding: 10px;
+    width: 25%;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(91, 18, 18, 0.961);
+    
+
+ul li {
+    transition: 0.3s;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+    background-color: #9e123c;
+}
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.apresentação {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+    margin: 30px auto;
+    width: 80%;
+}
+
+.declaração {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+    margin: 30px auto;
+    width: 35%;
+    cursor: pointer; /* Faz o mouse virar a 'mãozinha' de clique */
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+}
+
+.foto-container img {
+    width: 300px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    cursor: pointer; /* Faz o mouse virar a 'mãozinha' de clique */
+}
+
+.foto-container img:hover {
+    transform: scale(1.05);
+    cursor: pointer; /* Faz o mouse virar a 'mãozinha' de clique */
+}
+
+.mensagem {
+    margin-top: 20px;
+    opacity: 0;
+    transition: 1s;
+    font-size: 20px;
+    color: #c2185b;
+}
+body {
+    background: linear-gradient(to bottom, #2c003e, #000);
+    color: white;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    cursor: pointer; /* Faz o mouse virar a 'mãozinha' de clique */
+}
+
+.galeria img {
+    width: 200px;
+    border-radius: 15px;
+    transition: 0.4s;
+    cursor: pointer; /* Faz o mouse virar a 'mãozinha' de clique */
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+    cursor: pointer; /* Faz o mouse virar a 'mãozinha' de clique */
+}
+
+.carta {
+    width: 50%;
+    height: 150px;
+    background: #ff4d88;
+    margin: 40px auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    
+}
+
+.carta.aberta {
+    height: 300px;
+    background: white;
+    color: #c2185b;
+}
+
+.carta-conteudo {
+    padding: 20px;
+    text-align: center;
+}
+body {
+    margin: 0;
+    background: black;
+    overflow-x: hidden;
+    color: white;
+}
+
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: transparent url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation: moveStars 60s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveStars {
+    from {background-position: 0 0;}
+    to {background-position: 10000px 5000px;}
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+.mini {
+    width: 200px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 80%;
+    border-radius: 20px;
+}
+.conteudo-carta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+    background: white;
+    color: #c2185b;
+    border-radius: 100px;
+    margin: 20px auto;
+    width: 300px;
+
+}
+
+.conteudo-carta.aberta {
+    max-height: 500px;
+    padding: 20px;
+
+}
+.carta {
+    background-color: #fff5f7; /* Um rosa bem clarinho */
+    border: 2px dashed #ff4d6d; /* Borda tracejada para parecer envelope */
+    border-radius: 15px;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #c9184a;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 20px auto;
+    cursor: pointer; /* Faz o mouse virar a 'mãozinha' de clique */
+}
+
+/* Efeito ao passar o mouse */
+.carta:hover {
+    transform: translateY(-5px);
+    background-color: #ffccd5;
+    border-style: solid;
+}
+
+/* Estilo do texto de baixo (a quebra de linha acontece aqui) */
+.instrucao {
+    display: block;    /* Força a quebra de linha */
+    margin-top: 15px;  /* Espaço entre o nome e o clique aqui */
+    font-size: 0.85em; /* Texto levemente menor */
+    font-style: italic;
+    opacity: 0.7;      /* Deixa o tom mais suave */
+}
+#conteudo-oculto {
+    animation: aparecer 1.5s ease;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2, h3 {
+    color: #c9184a;
+}
+.carta {
+            background-color: #fff0f3;
+            border: 2px dashed #ff4d6d;
+            border-radius: 15px;
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            font-family: sans-serif;
+            color: #ff4d6d;
+            cursor: pointer; /* Faz o mouse virar a 'mãozinha' de clique */
+            margin: 50px auto;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .carta:hover {
+            transform: scale(1.05);
+            background-color: #ffccd5;
+        }
+
+        .instrucao {
+            display: block;
+            font-size: 0.8em;
+            margin-top: 10px;
+            color: #c9184a;
+            font-weight: bold;
+        }
+
+        /* Estilo da Declaração (Começa escondida) */
+        #conteudo-oculto {
+            display: none; /* ESSENCIAL: Esconde o conteúdo no início */
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            font-family: sans-serif;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+       .botao-revelar {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.botao-revelar:hover {
+    background-color: #c9184a;
+    transform: scale(1.05);
+}
+.botao-voltar {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 0.9em;
+    transition: background 0.3s;
+}
+
+.botao-voltar:hover {
+    background-color: #495057;
+}
+#pagina1, #pagina2 {
+    transition: opacity 0.5s ease;
+    animation: fadeIn 0.8s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* Estilo geral dos parágrafos da declaração */
+.declaracao p {
+    font-family: 'Georgia', serif; /* Uma fonte mais clássica e romântica */
+    font-size: 1.2rem;
+    line-height: 1.8; /* Aumenta o espaço entre as linhas para facilitar a leitura */
+    color: #5a3e3e; /* Um marrom rosado suave, menos agressivo que o preto */
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+/* Destaque para o contador de dias */
+#contador {
+    font-weight: bold;
+    color: #ff4d6d; /* Cor rosa vibrante para o destaque */
+    font-size: 1.3rem;
+    background-color: #fff0f3;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 50px; /* Efeito de pílula/balão */
+    border: 1px solid #ffccd5;
+}
+.declaracao p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem; /* Fontes cursivas costumam precisar de um tamanho maior */
+    color: #c9184a;
+}
+/* Animação para os corações caírem */
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* O parágrafo romântico */
+.texto-romantico {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #c9184a;
+    background-color: #fff0f3;
+    padding: 20px;
+    border-radius: 20px;
+    border-left: 5px solid #ff4d6d;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: inline-block;
+    max-width: 80%;
+    margin-top: 50px;
+}
+
+.foto-container {
+    text-align: center;
+    margin-top: 100px;
+}
+.botao-voltar {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: sans-serif;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+.botao-voltar:hover {
+    transform: scale(1.05); /* Dá um leve aumento ao passar o mouse */
+}
+#secao-conteudo {
+    animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
