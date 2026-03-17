@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu te amo🎻❤️</title>
+    
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💌%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="stars"></div>
+        
+        <h1>Eu te amo! 💌</h1>
+        <p>E quando te encontro, tudo fica melhor!</p>
+        <b>Na minha maior saudade, eu olho para você, e tudo melhora...</b>
+
+    <div class="foto-container">        
+        <b>
+        <img src="img/primeira saida juntos.jpeg"onclick="mostrarMensagem()">
+        <img src="img/le_academia.jpeg"onclick="mostrarMensagem()">
+        <img src="img/le_meu_sol.jpeg"onclick="mostrarMensagem()">
+        <img src="img/le_princesa.jpeg"onclick="mostrarMensagem()">
+        <img src="img/le_minha_metade.jpeg"onclick="mostrarMensagem()">
+        </b> 
+
+    </div>   
+        
+        <div id="mensagem" class="mensagem">
+            <b><p>Não tenho palavras para dizer o quanto eu te amo e te quero cada vez mais na minha vida</p></b>
+            <b>todas essas fotos me fazem lembrar a cada dia, quem eu amo!</b>
+            <b>E me fazem amar você cada vez mais!</b>
+        </div>
+
+        <b>
+            <a href="leticia.html" style="text-decoration: none;">
+                <button class="botao-voltar" onclick="voltar()">Voltar ao início ↩️</button>
+            </a>
+        </b>
+
+    <script>
+        
+            // 4. CHUVA DE CORAÇÕES E VIOLINOS
+            setInterval(() => {
+            const elemento = document.createElement("div");
+
+            // Lógica para escolher aleatoriamente entre Coração e Violino
+            // Math.random() gera um número entre 0 e 1.
+            // Se for maior que 0.5 (50% de chance), é Violino. Se não, é Coração.
+                if (Math.random() > 0.5) {
+                    elemento.innerHTML = "🎻"; // Violino
+                } else {
+                    elemento.innerHTML = "💖"; // Coração
+                }
+
+                    // Estilos para fazer os elementos caírem (Mantido o original, com pequenos ajustes)
+                    elemento.style.position = "fixed";
+                    elemento.style.left = Math.random() * 100 + "vw"; // Posição horizontal aleatória
+                    elemento.style.top = "-30px"; // Começa um pouco acima da tela
+                    elemento.style.fontSize = "25px"; // Aumentei um pouquinho o tamanho para o violino aparecer melhor
+                    elemento.style.zIndex = "1000"; // Garante que fique por cima de tudo
+                    elemento.style.pointerEvents = "none"; // Impede que o ícone atrapalhe os cliques na página
+
+                    // Define a animação (o nome da animação deve ser o mesmo do seu CSS, ex: 'fall')
+                    elemento.style.animation = "fall 5s linear forwards";
+
+                    // Adiciona o elemento ao corpo da página
+                    document.body.appendChild(elemento);
+
+                    // Remove o elemento da página após 5 segundos para não pesar
+                    setTimeout(() => elemento.remove(), 5000);
+
+        }, 400); // Diminuí o tempo para 400ms para a chuva ficar um pouco mais densa
+
+    
+        function mostrarMensagem() {
+            const msg = document.getElementById("mensagem");
+            msg.style.opacity = "1";
+        }
+
+    </script>
+
+</body>
+</html>

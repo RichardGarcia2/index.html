@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu amor</title>
+    
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💌%3C/text%3E%3C/svg%3E">
+
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="pagina2" style="display: none;">  </div>
+            
+            <div class="stars"></div>
+
+        <h1>Se você chegou até aqui… 💌</h1>
+        <b>É porque a sua felicidade e o seu jeito carinhosa são o motivo do meu amor por você.</b>
+
+        <br>
+
+        <img src="img/Lele.jpeg" class="mini" onclick="abrirTudo(this)">
+  
+    
+<div id="conteudo-revelado" style="display: none; margin-top: 20px;">
+    <div class="declaracao">
+        <p>Você é resposta das minhas orações, meu sorriso fácil e minha paz.</p>
+        <p id="contador"></p>
+    </div>
+   
+    <h3>Meus deveres como seu namorado!!</h3> 
+    <ul type="disc">
+        <li><b>Orar por você</li>
+        <li>Estar sempre com você, mesmo nos momentos difíceis</li>
+        <li>Ser compreensivo (mesmo estando estressado 🤣)</li>
+        <li>Consagrar a nossa vida e familia ao serviço do Senhor</li>
+        <li>Preparar seu café (mesmo que eu não goste 🤣)</li>
+        <li>Mimar a mulher que amo!</li>
+    </ul>
+    
+    <a href="leticia.html">
+        <button class="botao-voltar" onclick="voltarAoInicio()">
+    Voltar ao início ↩️
+    </button>
+    </a>
+
+    <a href="enf.html">
+        <button class="botao-revelar" onclick="mostrarMais()"> 
+            <h2>Sua vida que amo acompanhar!💌</h2>
+        </button>
+    </a>
+
+</div>
+
+<div id="modal" class="modal" onclick="fecharImagem()">
+    <img id="imgGrande">
+</div>
+
+
+<script>
+function abrirTudo(img) {
+    // 1. Abre o Modal (o que você já fazia)
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("imgGrande").src = img.src;
+
+    // 2. Mostra a lista e a declaração
+    var lista = document.getElementById("conteudo-revelado");
+    lista.style.display = "block"; 
+}
+
+function fecharImagem() {
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+
+<script>function revelarConteudo() {
+    var segredo = document.getElementById("conteudo-secreto");
+    
+    if (segredo.style.display === "none") {
+        segredo.style.display = "block";
+        // Rola a página para baixo suavemente para ela ver a lista
+        segredo.scrollIntoView({ behavior: 'smooth' });
+    }
+}</script>
+
+<script>
+
+// 4. CHUVA DE CORAÇÕES E VIOLINOS
+setInterval(() => {
+    const elemento = document.createElement("div");
+
+    // Lógica para escolher aleatoriamente entre Coração e Violino
+    // Math.random() gera um número entre 0 e 1.
+    // Se for maior que 0.5 (50% de chance), é Violino. Se não, é Coração.
+    if (Math.random() > 0.5) {
+        elemento.innerHTML = "🎻"; // Violino
+    } else {
+        elemento.innerHTML = "💖"; // Coração
+    }
+
+    // Estilos para fazer os elementos caírem (Mantido o original, com pequenos ajustes)
+    elemento.style.position = "fixed";
+    elemento.style.left = Math.random() * 100 + "vw"; // Posição horizontal aleatória
+    elemento.style.top = "-30px"; // Começa um pouco acima da tela
+    elemento.style.fontSize = "25px"; // Aumentei um pouquinho o tamanho para o violino aparecer melhor
+    elemento.style.zIndex = "1000"; // Garante que fique por cima de tudo
+    elemento.style.pointerEvents = "none"; // Impede que o ícone atrapalhe os cliques na página
+
+    // Define a animação (o nome da animação deve ser o mesmo do seu CSS, ex: 'fall')
+    elemento.style.animation = "fall 5s linear forwards";
+
+    // Adiciona o elemento ao corpo da página
+    document.body.appendChild(elemento);
+
+    // Remove o elemento da página após 5 segundos para não pesar
+    setTimeout(() => elemento.remove(), 5000);
+
+}, 400); // Diminuí o tempo para 400ms para a chuva ficar um pouco mais densa
+
+</script>
+
+<script>
+  function revelarConteudo() {
+    // Esconde a Página 1 (Carta)
+    document.getElementById("pagina1").style.display = "none";
+    
+    // Mostra a Página 2 (Declaração)
+    document.getElementById("pagina2").style.display = "block";
+    
+    // Sobe para o topo para garantir que ela comece lendo do início
+    window.scrollTo(0, 0);
+}
+
+function voltarAoInicio() {
+    // Esconde a Página 2 (Declaração)
+    document.getElementById("pagina2").style.display = "none";
+    
+    // Mostra a Página 1 (Carta) novamente
+    document.getElementById("pagina1").style.display = "block";
+    
+    // Rola para o topo suavemente
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

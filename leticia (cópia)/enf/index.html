@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha enfermeira🩺</title>
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💌%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+      
+    <div class="stars"></div>
+
+        <h2>Minha enfermeira 🩺</h2>
+
+        <img src="img/enfermeira3.jpeg" class="mini" onclick="revelarTudo()" style="max-width: 200px; cursor: pointer; border-radius: 15px;">
+        <p style="color: #ff4d6d; font-family: sans-serif; margin-top: 10px;">Clique na foto! ☝️</p>
+    
+
+    <div id="pagina3" style="display: none; margin-top: 20px;">
+        
+        <div class="declaracao">
+            <p class="texto-romantico">Amo como você é dedicada em tudo que faz! ❤️</p>
+        </div>
+
+        <div class="galeria">
+            <p style="font-family: sans-serif; color: #666;">Clique nas fotos abaixo:</p>
+            <b>
+            <img src="img/enfermeira1.jpg" onclick="trocarFrase()">
+            <img src="img/enfermeira2.jpg" onclick="trocarFrase()">
+            <img src="img/enf4.jpeg" onclick="trocarFrase()">
+            </b>
+        </div>
+        
+        <h3 id="frase" style="font-family: 'Dancing Script', cursive; color: #ff4d6d; min-height: 40px;"></h3>
+       
+        <a href="leticia.html" style="text-decoration: none;">
+            <button class="botao-voltar" onclick="voltar()">Voltar ao início ↩️</button>
+        </a>
+
+
+        <a href="amor.html">
+            <button class="botao-revelar" onclick="mostrarMais()"> 
+                <h2>Um segredo!</h2>
+            </button>
+        </a>
+
+    </div>
+
+<script>
+    // 1. FUNÇÃO PARA REVELAR O CONTEÚDO
+    function revelarTudo() {
+        document.getElementById("pagina3").style.display = "none";
+        document.getElementById("pagina3").style.display = "block";
+    }
+
+        // 2. FUNÇÃO PARA VOLTAR AO INÍCIO
+        function voltar() {
+        // Esconde a galeria e as frases
+        document.getElementById("secao-conteudo").style.display = "none";
+        
+        // Mostra a seção inicial (onde tem a foto para clicar)
+        document.getElementById("secao-clique").style.display = "block";
+        
+        // Opcional: limpa a frase para que comece do zero na próxima vez
+        document.getElementById("frase").innerText = ""; 
+        index = 0; 
+    }
+    // 3. LÓGICA DAS FRASES NA GALERIA
+    const frases = [ 
+        "Minha branquinha bochechuda.",
+        "Você é tudo pra mim",
+        "Perfeita",
+        "incrivel",
+        "maravilhosa",
+        "minha doutora 😍",
+        "meu amor",
+        "minha vida inteira",
+        "minha GG 😍"
+    ];
+    let index = 0;
+
+    function trocarFrase() {
+        const campoFrase = document.getElementById("frase");
+        campoFrase.innerText = frases[index];
+        index = (index + 1) % frases.length;
+    }
+
+    // 4. CHUVA DE CORAÇÕES E VIOLINOS
+setInterval(() => {
+    const elemento = document.createElement("div");
+
+    // Lógica para escolher aleatoriamente entre Coração e Violino
+    // Math.random() gera um número entre 0 e 1.
+    // Se for maior que 0.5 (50% de chance), é Violino. Se não, é Coração.
+    if (Math.random() > 0.5) {
+        elemento.innerHTML = "🎻"; // Violino
+    } else {
+        elemento.innerHTML = "💖"; // Coração
+    }
+
+    // Estilos para fazer os elementos caírem (Mantido o original, com pequenos ajustes)
+    elemento.style.position = "fixed";
+    elemento.style.left = Math.random() * 100 + "vw"; // Posição horizontal aleatória
+    elemento.style.top = "-30px"; // Começa um pouco acima da tela
+    elemento.style.fontSize = "25px"; // Aumentei um pouquinho o tamanho para o violino aparecer melhor
+    elemento.style.zIndex = "1000"; // Garante que fique por cima de tudo
+    elemento.style.pointerEvents = "none"; // Impede que o ícone atrapalhe os cliques na página
+
+    // Define a animação (o nome da animação deve ser o mesmo do seu CSS, ex: 'fall')
+    elemento.style.animation = "fall 5s linear forwards";
+
+    // Adiciona o elemento ao corpo da página
+    document.body.appendChild(elemento);
+
+    // Remove o elemento da página após 5 segundos para não pesar
+    setTimeout(() => elemento.remove(), 5000);
+
+}, 400); // Diminuí o tempo para 400ms para a chuva ficar um pouco mais densa
+</script>
+
+</body>
+</html>
